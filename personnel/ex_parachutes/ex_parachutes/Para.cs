@@ -46,9 +46,23 @@ namespace ex_parachutes
             {
                 if (y < realheight / 2)
                 {
+                    withPara = false;
+                }
+                else
+                {
                     withPara = true;
                 }
-                y++;
+
+                if (!withPara)
+                {
+                    y++;
+                    y++;
+                    y++;
+                }
+                else
+                {
+                    y++;
+                }
             }
         }
 
@@ -57,8 +71,17 @@ namespace ex_parachutes
             for (int i = 0; i < withoutParachute.Length; i++)
             {
                 Console.SetCursorPosition(x, i + y);
-                Console.WriteLine(withoutParachute[i]);
+                if (!withPara)
+                {
+                    Console.WriteLine(withoutParachute[i]);
+                }
+                else
+                {
+                    Console.WriteLine(withParachute[i]);
+                }
             }
+            Console.SetCursorPosition(x, y - 1);
+            Console.WriteLine(nom);
         }
     }
 }

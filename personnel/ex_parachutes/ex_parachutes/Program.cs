@@ -40,7 +40,7 @@
                             break;
                         case ConsoleKey.Spacebar:
                             whichPara++;
-                            Para parachutiste = new Para("parachutiste" + whichPara, plane.x);
+                            Para parachutiste = new Para("Bob " + whichPara, plane.x);
                             para.Add(parachutiste);
                             break;
                     }
