@@ -14,14 +14,21 @@ namespace Drones
 
             // Création de la flotte de drones
             List<Drone> fleet= new List<Drone>();
-            Drone drone = new Drone();
-            drone.x = 100;
-            drone.y = 100;
-            drone.name = "Joe";
-            fleet.Add(drone);
+            List<Building> ground = new List<Building>();
+            for (int i = 0; i < 100; i++)
+            {
+                Drone drone = new Drone(100, 100, "Joe");
+                fleet.Add(drone);
+            }
+
+            for (int i = 0; i < 100; i++)
+            {
+                Building build = new Building(1, 1, 10, 10, Color.Brown);
+                ground.Add(build);
+            }
 
             // Démarrage
-            Application.Run(new AirSpace(fleet));
+            Application.Run(new AirSpace(fleet, ground));
         }
     }
 }
