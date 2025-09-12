@@ -21,9 +21,9 @@ namespace Drones
                 fleet.Add(drone);
             }
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Building build = new Building(1, 1, 10, 10, Color.Brown);
+                Building build = new Building(10, 50, 20, 20, 100, Color.Yellow);
                 ground.Add(build);
             }
 

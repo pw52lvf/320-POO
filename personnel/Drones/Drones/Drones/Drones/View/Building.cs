@@ -14,7 +14,7 @@ namespace Drones
         // De manière graphique
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.FillRectangle(buildBrush, x, y, largeur, taille);
+            drawingSpace.Graphics.FillRectangle(buildBrush, x, y, largeurH, largeurV);
         }
     }
 }

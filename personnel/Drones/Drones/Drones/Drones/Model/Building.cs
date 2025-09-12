@@ -8,17 +8,19 @@ namespace Drones
 {
     public partial class Building
     {
-        int x;
-        int y;
-        int largeur;
+        int x = Helpers.GlobalHelpers.alea.Next(1, 1200);
+        int y = Helpers.GlobalHelpers.alea.Next(1, 600);
+        int largeurH = Helpers.GlobalHelpers.alea.Next(20, 50);
+        int largeurV = Helpers.GlobalHelpers.alea.Next(20, 50);
         int taille;
         Color color;
 
-        public Building(int x, int y, int largeur, int taille, Color color)
+        public Building(int x, int y, int largeurH, int largeurV, int taille, Color color)
         {
             this.x = x;
             this.y = y;
-            this.largeur = largeur;
+            this.largeurH = largeurH;
+            this.largeurV = largeurV;
             this.taille = taille;
             this.color = color;
         }
