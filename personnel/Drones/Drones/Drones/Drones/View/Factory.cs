@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Drones.Helpers;
 
 namespace Drones
 {
-    public partial class Building
+    public partial class Factory : Building
     {
-        private Brush buildBrush = new SolidBrush(Color.Brown);
+        private Brush buildBrush = new SolidBrush(Color.Gray);
 
         // De manière graphique
         public void Render(BufferedGraphics drawingSpace)

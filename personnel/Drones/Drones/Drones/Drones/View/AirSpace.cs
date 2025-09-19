@@ -39,10 +39,22 @@ namespace Drones
             {
                 drone.Render(airspace);
             }
-
             foreach (Building build in ground)
             {
-                build.Render(airspace);
+                if (build.GetType() == typeof(Factory)) // Identify the type of employee
+                {
+                    Factory factory = (Factory)build;   // Create a Manager object using type casting
+                    factory.Render(airspace);
+                }
+                else if (build.GetType() == typeof(Store))
+                {
+                    Store store = (Store)build;
+                    store.Render(airspace);
+                }
+                else
+                {
+                    build.Render(airspace);
+                }
             }
 
             airspace.Render();
@@ -54,10 +66,6 @@ namespace Drones
             foreach (Drone drone in fleet)
             {
                 drone.Update(interval);
-            }
-            foreach (Building build in ground)
-            {
-                build.Update(interval);
             }
         }
 
