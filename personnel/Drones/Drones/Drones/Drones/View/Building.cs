@@ -9,7 +9,7 @@ namespace Drones
 {
     public partial class Building
     {
-        private Brush buildBrush = new SolidBrush(Color.Brown);
+        private Brush buildBrush = new SolidBrush(Color.Tomato);
 
         // De manière graphique
         public void Render(BufferedGraphics drawingSpace)

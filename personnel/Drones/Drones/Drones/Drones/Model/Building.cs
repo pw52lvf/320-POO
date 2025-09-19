@@ -14,15 +14,28 @@ namespace Drones
         int largeurV = Helpers.GlobalHelpers.alea.Next(20, 50);
         int taille;
         Color color;
+        bool unefois = true;
 
-        public Building(int x, int y, int largeurH, int largeurV, int taille, Color color)
+        public Building(int taille)
         {
-            this.x = x;
-            this.y = y;
-            this.largeurH = largeurH;
-            this.largeurV = largeurV;
+            //this.x = x;
+            //this.y = y;
+            //this.largeurH = largeurH;
+            //this.largeurV = largeurV;
             this.taille = taille;
-            this.color = color;
+        }
+
+        public void Update(int interval)
+        {
+            if (unefois)
+            {
+                unefois = false;
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+                Console.WriteLine(largeurH);
+                Console.WriteLine(largeurV);
+                Console.WriteLine(taille);
+            }
         }
     }
 }

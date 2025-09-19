@@ -55,6 +55,10 @@ namespace Drones
             {
                 drone.Update(interval);
             }
+            foreach (Building build in ground)
+            {
+                build.Update(interval);
+            }
         }
 
         // Méthode appelée à chaque frame

@@ -15,7 +15,7 @@ namespace Drones
             // Création de la flotte de drones
             List<Drone> fleet= new List<Drone>();
             List<Building> ground = new List<Building>();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Drone drone = new Drone(100, 100, "Joe");
                 fleet.Add(drone);
@@ -23,7 +23,7 @@ namespace Drones
 
             for (int i = 0; i < 10; i++)
             {
-                Building build = new Building(10, 50, 20, 20, 100, Color.Yellow);
+                Building build = new Building(80);
                 ground.Add(build);
             }
 
