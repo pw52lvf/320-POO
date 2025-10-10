@@ -19,7 +19,7 @@ namespace Drones
             List<Building> ground = new List<Building>();
             for (int i = 0; i < 1; i++)
             {
-                Drone drone = new Drone(100, 100, "Joe");
+                Drone drone = new Drone(100, 100);
                 fleet.Add(drone);
             }
 
